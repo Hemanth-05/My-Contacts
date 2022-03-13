@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        .main{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #title{
+            font-size: large;
+        }
+
+        .field{
+            width: 15%;
+            height: 20px;
+        }
+
+        .save{
+            background-color: rgb(156, 66, 240);
+            padding:10px;
+            width: 70px;
+            position: relative;
+            left:7%;
+        }
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+        td{
+            width:300px;
+            height:70px;
+        }
+
+        .head{
+            background-color: rgb(126, 118, 124);
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "main">
+        <center>
+            <h2>Contact Form and Contact List Page</h2>
+            <p id = "title"> Add Contacts </p>
+            <form action="/contact" method="POST">
+                Name <input type="text" class = "field" name="name"> <br><br>
+                Ph No <input type="text" class = "field" name="phone"> <br><br>
+                Email <input type="email" class = "field" name="email"> <br><br>
+                <input type = "submit" value = "Save" class = "save">
+            </form>
+            <h3> My Contacts </h3>
+            <table>
+                <tr>
+                    <td class = "head"> Name </td>
+                    <td class = "head"> Ph No </td>
+                    <td class = "head"> Email </td>
+                </tr>
+                <%	for(var i=0;i<contactList.length;i++) { %>
+                    <tr>
+                      <td> <%=contactList[i].username%>  </td>
+                      <td>  <%=contactList[i].phone%> </td>
+                      <td> <%=contactList[i].email%>  </td>
+                      </tr>
+                  </form>		
+                <%	} %>
+            </table>
+        </center>
+    </div>
+</body>
+</html>
