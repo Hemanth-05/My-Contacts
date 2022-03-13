@@ -1,7 +1,7 @@
 
 # Project Title
 
-Contacts App
+My Contacts
 
 ---
 
@@ -48,7 +48,7 @@ $ npm install npm -g
 
 ## Install
 
-$ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
+$ git clone https://github.com/Hemanth-05/My-Contacts.git
 
 $ cd contactApp
 
